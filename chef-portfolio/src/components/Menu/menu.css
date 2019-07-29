@@ -1,0 +1,10 @@
+.menuWrapper {
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+  margin-right: 20px;
+}
+
+.menuWrapper li {
+  padding: 15px;
+}

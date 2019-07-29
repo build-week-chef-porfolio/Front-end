@@ -1,22 +1,29 @@
 import React, { Component } from 'react'
-import { Menu } from 'semantic-ui-react'
+
 
 const MainMenu = () => {
 
     return (
-      <Menu>
-        <Menu.Item>
-          Editorials
-        </Menu.Item>
-
-        <Menu.Item>
-          Reviews
-        </Menu.Item>
-
-        <Menu.Item>
-          Upcoming Events
-        </Menu.Item>
-      </Menu>
+      <ul className='menuWrapper'>
+        <li>
+          Recipes
+        </li>
+        <li>
+          Images
+        </li>
+        <li>
+          Portfolio
+        </li>
+        <li>
+          Clients
+        </li>
+        <li>
+          Support
+        </li>
+        <li>
+          Sign Out
+        </li>
+      </ul>
     )
 }
 

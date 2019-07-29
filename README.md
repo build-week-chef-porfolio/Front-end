@@ -3,9 +3,9 @@
 ## commit hygiene: 
 
 1. Clone this repo (don't fork it)
-1. Create a new branch for any work you do on this repo (DO NOT COMMIT TO MASTER BRANCH)
-1. See this branch for branch naming convention (ben/README-edit)
-1. See this pull request for how to comment and manage your own pull requests: https://github.com/build-week-chef-porfolio/Front-end/pull/1
+2. Create a new branch for any work you do on this repo (DO NOT COMMIT TO MASTER BRANCH)
+3. See this branch for branch naming convention (ben/README-edit)
+4. See this pull request for how to comment and manage your own pull requests: https://github.com/build-week-chef-porfolio/Front-end/pull/1
 
 
 ## Product Canvas:
@@ -17,19 +17,21 @@ Proposal
 - What problem does your app solve?
 - Be as specific as possible; how does your app solve the problem?
 - What is the mission statement?
+
 Features
 
 - What features are required for your minimum viable product?
 - What features may you wish to put in a future release?
 - What do the top 3 similar apps do for their users?
+
 Frameworks - Libraries
 
 - What 3rd party frameworks/libraries are you considering using?
 - Do APIs require you to contact its maintainer to gain access?
 - Are you required to pay to use the API?
 - Have you considered using Apple Frameworks? (MapKit, Healthkit, ARKit?)
-For Data Scientists
 
+For Data Scientists
 
 - Describe the Established data source with at least rough data able to be provided on day 1. 
 - You can gather information about the data set you’ll be working with from the project description. Be sure to collaborate with your PM, and your Backend Architect to chat about the resources you have.
