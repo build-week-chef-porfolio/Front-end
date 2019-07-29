@@ -185,6 +185,33 @@ body footer a {
   font-size: 1.4rem;
   color: white;
 }
+body .us2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+body .us2 img {
+  width: 20rem;
+  height: 30rem;
+  object-fit: cover;
+  opacity: 0.9;
+}
+body .us2 img:hover {
+  opacity: 1;
+}
+body .us2 div {
+  background-color: white;
+  margin: 0 1rem  1rem 0;
+  margin: 3rem;
+}
+body .us2 p {
+  font-size: 1.2rem;
+  padding: 0 1.5rem;
+  color: black;
+}
+body .us2 strong {
+  font-weight: bold;
+}
 body .us h1 {
   color: white;
   font-size: 4rem;
