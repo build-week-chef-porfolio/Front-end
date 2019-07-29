@@ -1,0 +1,15 @@
+.headerWrapper {
+    width: 100%;
+    margin: 0 auto;    
+    background-color:red;
+    height: 600px;
+}
+
+.headerImage {
+    height: auto;
+}
+
+.headerImage img {
+    width: 100%;
+    height: auto;
+}
