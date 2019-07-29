@@ -125,7 +125,7 @@ body .pics {
 }
 @media screen and (max-width: 800px) {
   body .pics {
-    flex-direction: column-reverse;
+    flex-direction: column;
     flex-wrap: wrap;
     max-width: 100%;
   }
@@ -141,7 +141,8 @@ body .pics img {
 }
 @media screen and (max-width: 800px) {
   body .pics img {
-    max-width: 50%;
+    max-width: 100%;
+    width: 100%;
     margin: 1rem 0;
     border-radius: 10px;
   }
@@ -151,6 +152,13 @@ body .pics img {
     max-width: 100%;
     margin: 1rem 0;
     border-radius: 5px;
+  }
+}
+@media screen and (max-width: 800px) {
+  body .pics #chefimg {
+    display: inline-block;
+    width: 100%;
+    border-radius: 10px;
   }
 }
 @media screen and (max-width: 500px) {
