@@ -4,8 +4,8 @@
 
 1. Clone this repo (don't fork it)
 1. Create a new branch for any work you do on this repo (DO NOT COMMIT TO MASTER BRANCH)
-1. See this commit for branch naming convention (ben/README-edit)
-1. See this pull request for how to comment and manage your own pull requests (pr url)
+1. See this branch for branch naming convention (ben/README-edit)
+1. See this pull request for how to comment and manage your own pull requests: https://github.com/build-week-chef-porfolio/Front-end/pull/1
 
 
 ## Product Canvas:
