@@ -186,6 +186,26 @@ body footer a {
   font-size: 1.4rem;
   color: white;
 }
+body .us h1 {
+  color: white;
+  font-size: 4rem;
+}
+body .us img {
+  padding: 5rem;
+  background-color: white;
+  border: 4px solid darkred;
+  opacity: 0.9;
+  filter: blur(1px);
+  width: 30%;
+  margin: 1rem;
+  border-radius: 500px;
+}
+body .us img:hover {
+  padding: 1rem;
+  opacity: 1;
+  transition: 0.2s;
+  filter: brightness(110%);
+}
 /*
 font-family: 'Nunito', sans-serif;
 font-family: 'Merriweather', serif;
