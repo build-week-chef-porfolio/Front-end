@@ -6,6 +6,11 @@ body {
   background-color: #0D132B;
   margin: 0 20%;
 }
+@media screen and (max-width: 800px) {
+  body {
+    margin: 0 10%;
+  }
+}
 @media screen and (max-width: 500px) {
   body {
     margin: 0 4%;
@@ -39,6 +44,12 @@ body .navigation nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+@media screen and (max-width: 800px) {
+  body .navigation nav {
+    margin: 0 5%;
+    padding-top: 0.5rem;
+  }
 }
 @media screen and (max-width: 500px) {
   body .navigation nav {
@@ -75,6 +86,12 @@ body .headline h1 {
   width: 50%;
   text-align: center;
 }
+@media screen and (max-width: 800px) {
+  body .headline h1 {
+    display: block;
+    width: 100%;
+  }
+}
 @media screen and (max-width: 500px) {
   body .headline h1 {
     display: block;
@@ -89,6 +106,12 @@ body .headline h2 {
   width: 50%;
   text-align: center;
 }
+@media screen and (max-width: 800px) {
+  body .headline h2 {
+    display: block;
+    width: 100%;
+  }
+}
 @media screen and (max-width: 500px) {
   body .headline h2 {
     display: block;
@@ -100,6 +123,13 @@ body .pics {
   display: flex;
   justify-content: space-between;
 }
+@media screen and (max-width: 800px) {
+  body .pics {
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    max-width: 100%;
+  }
+}
 @media screen and (max-width: 500px) {
   body .pics {
     flex-wrap: wrap;
@@ -109,10 +139,18 @@ body .pics img {
   max-width: 30%;
   object-fit: cover;
 }
+@media screen and (max-width: 800px) {
+  body .pics img {
+    max-width: 50%;
+    margin: 1rem 0;
+    border-radius: 10px;
+  }
+}
 @media screen and (max-width: 500px) {
   body .pics img {
     max-width: 100%;
     margin: 1rem 0;
+    border-radius: 5px;
   }
 }
 @media screen and (max-width: 500px) {
