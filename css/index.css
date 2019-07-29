@@ -18,6 +18,12 @@ body {
 }
 body p {
   color: white;
+  font-size: 1.8rem;
+}
+@media screen and (max-width: 500px) {
+  body p {
+    font-size: 2.4rem;
+  }
 }
 body header h3 {
   font-family: Nunito, sans-serif;
@@ -125,14 +131,9 @@ body .pics {
 }
 @media screen and (max-width: 800px) {
   body .pics {
-    flex-direction: column;
+    flex-direction: column-reverse;
     flex-wrap: wrap;
     max-width: 100%;
-  }
-}
-@media screen and (max-width: 500px) {
-  body .pics {
-    flex-wrap: wrap;
   }
 }
 body .pics img {
@@ -156,9 +157,7 @@ body .pics img {
 }
 @media screen and (max-width: 800px) {
   body .pics #chefimg {
-    display: inline-block;
-    width: 100%;
-    border-radius: 10px;
+    display: none;
   }
 }
 @media screen and (max-width: 500px) {
@@ -190,6 +189,11 @@ body .us h1 {
   color: white;
   font-size: 4rem;
 }
+@media screen and (max-width: 800px) {
+  body .us h1 {
+    text-align: center;
+  }
+}
 body .us img {
   padding: 5rem;
   background-color: white;
@@ -204,7 +208,29 @@ body .us img:hover {
   padding: 1rem;
   opacity: 1;
   transition: 0.2s;
-  filter: brightness(110%);
+  filter: brightness(105%);
+}
+@media screen and (max-width: 800px) {
+  body .us img {
+    width: 28%;
+    padding: 1.5rem;
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+@media screen and (max-width: 500px) {
+  body .us img {
+    opacity: 1;
+    filter: blur(0px);
+    padding: 0;
+    width: 40%;
+  }
+  body .us img:hover {
+    padding: 0;
+    opacity: 1;
+    transition: 0.2s;
+    filter: brightness(105%);
+  }
 }
 /*
 font-family: 'Nunito', sans-serif;
