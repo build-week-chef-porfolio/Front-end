@@ -6,9 +6,11 @@ const Header = () => {
 
     return (
         <div className="headerWrapper">
-            <MainMenu />
             <div className="headerImage">
-                <h1>Chef Portfolio is the place for Professional Chefs</h1>
+                <MainMenu />
+                <div className='headerH1'>
+                    <h1>Chef Portfolio is the place for Professional Chefs</h1>
+                </div>
             </div>
         </div>
     )
