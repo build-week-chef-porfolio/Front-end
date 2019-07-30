@@ -1,6 +1,8 @@
 @import './components/Header/header.css';
 @import './components/Footer/footer.css';
 @import './components//Menu/menu.css';
+@import './components//Recipes/recipes.css';
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",

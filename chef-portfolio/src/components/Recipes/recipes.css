@@ -1,0 +1,31 @@
+.recipeDetailedWrapper {
+  max-width: 80vw;
+  margin: 0 auto;
+}
+
+.img-and-name img {
+  max-width: 150px;
+}
+
+.recipeInfo {
+  display: flex;
+  justify-content: center;
+}
+
+.recipeInfo .servings-total-time, .recipeInfo .prep-cook-times, .recipeInfo .oven-temp {
+  flex-direction: column;
+  padding: 0px 10px;
+  border-bottom: 1px solid red;
+}
+
+.recipeInfo .servings-total-time, .recipeInfo .prep-cook-times {
+  border-right: 1px solid red;
+}
+/* 
+.recipe-description {
+  display: flex;
+} */
+
+.ingredients-and-instructions {
+  padding: 20px;
+}
