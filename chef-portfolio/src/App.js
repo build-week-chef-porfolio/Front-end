@@ -5,10 +5,10 @@ import Login from './login';
 
 //import useLocalStorage from './authorization/useLocalStorage'
 
-import Header from './components/Header/Header';
 import HomePageContainer from './components/MainContainer/HomePageContainer';
 import Footer from './components/Footer/Footer';
-import RecipeCard from './components/Recipes/RecipeCard.js';
+
+import AppRouter from './AppRouter';
 
 
 function App() {
@@ -18,10 +18,10 @@ function App() {
     <div className="App">
 
       <Login />
-
-      <Header />
-      <HomePageContainer />
-      <RecipeCard />
+      <AppRouter />
+      {/* <DropdownFilterSearchInMenu /> */}
+      {/* <HomePageContainer /> */}
+      {/* <RecipeCard /> */}
       <Footer />
 
     </div>
