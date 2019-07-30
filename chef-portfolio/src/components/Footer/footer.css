@@ -1,0 +1,11 @@
+.footerWrapper {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    height: 121px;
+}
+
+.footerWrapper p {
+    padding: 15px;
+}
