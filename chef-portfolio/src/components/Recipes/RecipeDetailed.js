@@ -1,6 +1,25 @@
-import React from 'react'
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
+
+const useStyles = makeStyles(theme => ({
+  root: {
+    flexGrow: 1,
+  },
+  paper: {
+    padding: theme.spacing(2),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+  },
+}));
+
+
 
 const RecipeDetailed = () => {
+
+  const classes = useStyles();
+
   return (
     <div className='recipeDetailedWrapper'>
       <div> render header from UI team...DELETE this after</div>
@@ -11,16 +30,41 @@ const RecipeDetailed = () => {
       </div>
       <div className='recipeInfo'>
         <div className='servings-total-time'>
-          Yield: 5 servings
-          Total Time: 55 mins
+          <p>Yield: 5 servings</p>
+          <p>Total Time: 55 mins</p>
         </div>
         <div className='prep-cook-times'>
-          Prep Time: 30 mins
-          Cook Time: 25 mins
+          <p>Prep Time: 30 mins</p>
+          <p>Cook Time: 25 mins</p>
         </div>
         <div className='oven-temp'>
-          Oven Temp: 350
+          <p>Oven Temp: 350&deg;F</p>
         </div>
+      </div>
+      <div className='recipe-description'>
+        <p>Description: Tasty enchilada recipe</p>
+      </div>
+      <div className={classes.root} className='ingredients-and-instructions'>
+        <Grid container spacing={3} >
+          <Grid item xs={6}>
+            <Paper className={classes.paper}>Ingredients</Paper>
+          </Grid>
+          <Grid item xs={6}>
+            <Paper className={classes.paper}>Directions</Paper>
+          </Grid>
+          <Grid item xs={6}>
+            <Paper className={classes.paper}>2 cups sweet potato</Paper>
+          </Grid>
+          {/* <Grid item xs={3}>
+            <Paper className={classes.paper}>xs=3</Paper>
+          </Grid> */}
+          <Grid item xs={6}>
+            <Paper className={classes.paper}>1. Preheat oven</Paper>
+          </Grid>
+          {/* <Grid item xs={3} spacing={3}>
+            <Paper className={classes.paper}>xs=3</Paper>
+          </Grid> */}
+        </Grid>
       </div>
     </div>
   )
