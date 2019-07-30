@@ -1,0 +1,56 @@
+.singlehomeWrapper {
+    background-color: #0D132B;
+    color: white;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.singleheaderWrapper {
+    width: 100%;
+}
+
+.singlemenuWrapper {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin-right: 20px;
+  }
+  
+  .singlemenuWrapper li {
+    padding: 15px;
+  }
+
+.singlerecipescardWrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-top: 60px;
+}
+
+.ui.card {
+    margin: 0px !important;
+}
+
+.singlechefcardWrapper {
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 40px;
+    width: 100%;
+}
+
+
+.singlefooterWrapper {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    height: 121px;
+    width: 100%;
+}
+
+.singlefooterWrapper p {
+    padding: 15px;
+}
+
