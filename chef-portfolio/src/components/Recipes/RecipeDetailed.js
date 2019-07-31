@@ -29,9 +29,18 @@ const RecipeDetailed = (props) => {
 
   return (
     <div className='recipeDetailedWrapper'>
-      <div className='img-and-name'>
-        <img src={recipeToDisplay.imgURL} alt='food photo' />
-        <h1>{recipeToDisplay.title}</h1>
+      <Grid>
+        <Grid.Row>
+          <Grid.Column width={8}>
+            <div className='img-and-name'>
+            <img src={recipeToDisplay.imgURL} alt='food photo' />
+            <h1>{recipeToDisplay.title}</h1>
+            </div>
+          </Grid.Column>
+        </Grid.Row>
+
+      </Grid>
+      
         <div className='recipeChefInfo'>
           <img src='https://s3-alpha-sig.figma.com/img/a729/e5df/b640ff2a85dfac945ac466139ed05c59?Expires=1565568000&Signature=DjOkk94C7GgdMqYa5I4UVmzUEMFSpNkG73lNhORsGKllh9SAQKMoe4j3PrAZ0RFGUzjKaOTBdCfbPsM4u8SasGIyO7ukuozu-xCPHAEMcTRgF4v8ztIA42PA1VrrS0CXsR1w2KhxE4pGjGu9A57UW0VB2E3pq74I6WuQ9Me9R4h8FA0twTVdh8~676oUVWKkUDl~0lStdv-aIwSQpu7MRwGO3gKYvk7PPmoSefwkJs3r4DHBTGMy9NgfiQau~wRbvEASo34MVtMQ72nPfhMYInPAQY-XnHmIKmnCZvNGBiviYH~WWg5flTWyUZ24kQHEYTqH1BCk-O25hTT4qpzkyQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA' alt='${recipeToDisplay.chef_id}'/>
           <p>{recipeToDisplay.chef_id}</p>

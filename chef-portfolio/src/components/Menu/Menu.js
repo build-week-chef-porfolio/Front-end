@@ -21,7 +21,7 @@ const MainMenu = () => {
           Support
         </li>
         <li>
-          Sign Out
+          Sign Up
         </li>
       </ul>
     )

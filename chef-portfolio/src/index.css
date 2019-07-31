@@ -1,16 +1,11 @@
 @import './components/Header/header.css';
 @import './components/Footer/footer.css';
 @import './components//Menu/menu.css';
-<<<<<<< HEAD
 @import './components//Blog/blog.css';
 @import './components//Bio/biopage.css';
 @import './components//SingleUser/single.css';
-=======
-
 @import './components//Recipes/recipes.css';
 
-
->>>>>>> e26683cb5070514de12e66996dcbac5ba0a44a8a
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
