@@ -2,18 +2,22 @@ import React from 'react'
 import { Card, Icon, Image } from 'semantic-ui-react';
 import { NavLink } from 'react-router-dom';
 
-const RecipeCard = () => {
+const RecipeCard = (props) => {
+  const recipeData = props.recipeData;
   return (
-    <Card href='/recipe-title'>
+    <Card>
       {/* <NavLink to={`/recipe-title`}> */}
-        <Image src='https://s3-alpha-sig.figma.com/img/63a0/c427/a8f9f5748d4674375419167bbfa4f6a3?Expires=1565568000&Signature=RvnNSgHeI82x3oBSycFoydUO~-J20c7uiE9OhfkPOXIt3aJ9SlV5EEGMQ9fRq8zE3RlTmVBkXxI80eQ0oWHbymL3Yjj4cJ-TvoV0KNWaNFbWjkbm4fB9CLXvw0BC87scEaTx58yCfrffg~g0D7kMDOjEYFJVYg~cRidIBkr~F~UolOiep4GaeTvbHiq2UNMrVRyA7N2ei9xW0utMXUFPbTpL0qZpDvCc-VyextCDivoDFad6xD~suqRHfw~afqjc4TlmJFMjzYXM2MfXOsE9B84TGm8fTFuJcS8~5yq5zs7i-khERlgpLJDmXFlsPo-aGqzp-6aIQoKQpD00r-T86w__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA' wrapped ui={false} />
+      <Image src='https://images.unsplash.com/photo-1511911063855-2bf39afa5b2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1834&q=80' as='a'
+        size='medium'
+        href={`/${recipeData.id}`}
+        alt={recipeData.title} wrapped ui={false} />
         <Card.Content>
-          <Card.Header>Liver Soup</Card.Header>
+          <Card.Header>{recipeData.title}</Card.Header>
           <Card.Meta>
-            <span className='description'>Soup for your Liver</span>
+            <span className='description'>{recipeData.description}</span>
           </Card.Meta>
           <Card.Description>
-            <span className='author'>By Chef Ben Roberts</span>
+            <span className='author'>By: {recipeData.chef_id}</span>
           </Card.Description>
         </Card.Content>
         <Card.Content extra>

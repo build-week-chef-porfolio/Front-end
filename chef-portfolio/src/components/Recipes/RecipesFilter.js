@@ -1,7 +1,10 @@
 import React from 'react';
-import { Dropdown, Input } from 'semantic-ui-react';
+import { Dropdown } from 'semantic-ui-react';
 
-const DropdownFilterSearchInMenu = () => {
+const DropdownFilterSearchInMenu = (props) => {
+
+  const recipesData = props.recipesData;
+
   return (
     <>
       <Dropdown
@@ -13,13 +16,10 @@ const DropdownFilterSearchInMenu = () => {
         className='icon'
       >
         <Dropdown.Menu>
-          <Input icon='search' iconPosition='left' className='search' />
-          <Dropdown.Divider />
-          <Dropdown.Header icon='tags' content='Tag Label' />
           <Dropdown.Menu scrolling>
-            <Dropdown.Item>Option 1</Dropdown.Item>
-            <Dropdown.Item>Option 2</Dropdown.Item>
-            <Dropdown.Item>Option 3</Dropdown.Item>
+            {recipesData.map(recipe => {
+              return <Dropdown.Item key={recipe.id}>{recipe.title}</Dropdown.Item>
+            })}
           </Dropdown.Menu>
         </Dropdown.Menu>
       </Dropdown>
@@ -33,13 +33,10 @@ const DropdownFilterSearchInMenu = () => {
         className='icon'
       >
         <Dropdown.Menu>
-          <Input icon='search' iconPosition='left' className='search' />
-          <Dropdown.Divider />
-          <Dropdown.Header icon='tags' content='Tag Label' />
           <Dropdown.Menu scrolling>
-            <Dropdown.Item>Option 1</Dropdown.Item>
-            <Dropdown.Item>Option 2</Dropdown.Item>
-            <Dropdown.Item>Option 3</Dropdown.Item>
+            {recipesData.map(recipe => {
+              return <Dropdown.Item key={recipe.id}>{recipe.chef_id}</Dropdown.Item>
+            })}
           </Dropdown.Menu>
         </Dropdown.Menu>
       </Dropdown>
@@ -53,13 +50,10 @@ const DropdownFilterSearchInMenu = () => {
         className='icon'
       >
         <Dropdown.Menu>
-          <Input icon='search' iconPosition='left' className='search' />
-          <Dropdown.Divider />
-          <Dropdown.Header icon='tags' content='Tag Label' />
           <Dropdown.Menu scrolling>
-            <Dropdown.Item>Option 1</Dropdown.Item>
-            <Dropdown.Item>Option 2</Dropdown.Item>
-            <Dropdown.Item>Option 3</Dropdown.Item>
+            {recipesData.map(recipe => {
+              return <Dropdown.Item key={recipe.id}>{recipe.meal_type}</Dropdown.Item>
+            })}
           </Dropdown.Menu>
         </Dropdown.Menu>
       </Dropdown>
@@ -73,13 +67,10 @@ const DropdownFilterSearchInMenu = () => {
         className='icon'
       >
         <Dropdown.Menu>
-          <Input icon='search' iconPosition='left' className='search' />
-          <Dropdown.Divider />
-          <Dropdown.Header icon='tags' content='Tag Label' />
           <Dropdown.Menu scrolling>
-            <Dropdown.Item>Option 1</Dropdown.Item>
-            <Dropdown.Item>Option 2</Dropdown.Item>
-            <Dropdown.Item>Option 3</Dropdown.Item>
+            {recipesData.map(recipe => {
+              return <Dropdown.Item key={recipe.id}>{recipe.ingredient}</Dropdown.Item>
+            })}
           </Dropdown.Menu>
         </Dropdown.Menu>
       </Dropdown>
