@@ -4,6 +4,7 @@ import HomePageContainer from './components/MainContainer/HomePageContainer';
 import RecipeDetailed from './components/Recipes/RecipeDetailed.js';
 import MainMenu from './components/Menu/Menu.js';
 import axios from 'axios'
+import RecipesList from './components/Recipes/RecipesList';
 
 
 
@@ -32,6 +33,14 @@ const AppRouter = () => {
           )} 
         />
         <Route
+          path='/recipes'
+          render={(props) => (
+            <RecipesList
+              {...props}
+              recipesData={recipesData}
+            />
+          )} />
+        <Route
           path='/:id'
           render={(props) => (
             <RecipeDetailed 
@@ -39,6 +48,7 @@ const AppRouter = () => {
               recipesData={recipesData}
             />
           )} />
+
       </Switch>
     </div>
   )
