@@ -10,7 +10,7 @@ const DropdownFilterSearchInMenu = (props) => {
     <Menu>
       <Dropdown
         text='Title'
-        icon='filter'
+        multiple icon='filter'
         floating
         labeled
         button

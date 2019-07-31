@@ -9,7 +9,6 @@ const HomePageContainer = (props) => {
     return (
         <div className="HomePageWrapper">
             <Header />
-            <DropdownFilterSearchInMenu recipesData={recipesData} />
             <RecipesList recipesData={recipesData} />
         </div>
     )
