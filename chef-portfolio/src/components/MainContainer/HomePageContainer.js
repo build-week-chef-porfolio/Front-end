@@ -10,8 +10,8 @@ const HomePageContainer = (props) => {
         <div className="HomePageWrapper">
             <p>THIS IS MAIN BODY CONTAINER</p>
             <Header />
-            <DropdownFilterSearchInMenu />
-            <RecipesList recipesData={recipesData}/>
+            <DropdownFilterSearchInMenu recipesData={recipesData} />
+            <RecipesList recipesData={recipesData} />
         </div>
     )
 
