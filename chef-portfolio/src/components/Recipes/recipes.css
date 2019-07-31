@@ -64,3 +64,11 @@
   margin-top: 15px;
   margin-bottom: 15px;
 }
+.ui.card {
+  margin: 1em 3em !important;
+}
+.ui.card>.image {
+  height: 200px;
+  width: auto;
+  margin: 0 auto;
+}
