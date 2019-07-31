@@ -11,6 +11,7 @@
   margin: 0px auto;
   text-align: left;
   justify-content: flex-start;
+  padding: 20px;
 }
 
 .img-and-name {
@@ -20,7 +21,7 @@
   width: 100%;
 }
 .img-and-name img {
-  max-width: 300px;
+  max-width: 500px;
 
 }
 .recipeChefInfo {
@@ -53,4 +54,8 @@
 
 .ingredients-and-instructions {
   padding: 20px;
+}
+
+.recipe-instructions {
+  margin-bottom: 20px;
 }
