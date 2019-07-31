@@ -1,15 +1,37 @@
-.recipeDetailedWrapper {
-  max-width: 80vw;
-  margin: 0 auto;
-}
-
-.img-and-name img {
-  max-width: 150px;
-}
-
-.recipeInfo {
+.recipes-list {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 20px;
+
+}
+
+.recipeDetailedWrapper {
+  max-width: 100%;
+  margin: 0px auto;
+  text-align: left;
+  justify-content: flex-start;
+}
+
+.img-and-name {
+  width: 100%;
+}
+.img-and-name p {
+  width: 100%;
+}
+.img-and-name img {
+  max-width: 300px;
+
+}
+.recipeChefInfo {
+  margin-left: auto;
+  width:300px;
+}
+.recipeInfo {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
 }
 
 .recipeInfo .servings-total-time, .recipeInfo .prep-cook-times, .recipeInfo .oven-temp {
@@ -21,10 +43,13 @@
 .recipeInfo .servings-total-time, .recipeInfo .prep-cook-times {
   border-right: 1px solid red;
 }
-/* 
+
 .recipe-description {
+  margin-top: 20px;
+  margin-bottom: 20px;
   display: flex;
-} */
+  font-weight: bold;
+}
 
 .ingredients-and-instructions {
   padding: 20px;
