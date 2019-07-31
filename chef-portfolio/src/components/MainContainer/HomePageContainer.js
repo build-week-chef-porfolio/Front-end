@@ -4,15 +4,14 @@ import DropdownFilterSearchInMenu from '../Recipes/RecipesFilter';
 import Header from '../Header/Header.js';
 import RecipesList from '../Recipes/RecipesList';
 
-const HomePageContainer = () => {
-
+const HomePageContainer = (props) => {
+    const recipesData = props.recipesData;
     return (
         <div className="HomePageWrapper">
             <p>THIS IS MAIN BODY CONTAINER</p>
             <Header />
             <DropdownFilterSearchInMenu />
-            <RecipeCard />
-            <RecipesList />
+            <RecipesList recipesData={recipesData}/>
         </div>
     )
 

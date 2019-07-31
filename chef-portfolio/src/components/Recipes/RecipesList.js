@@ -1,23 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios'
-
 import RecipeCard from '../Recipes/RecipeCard';
 
-const RecipesList = () => {
-
-  const [recipeData, setRecipeData] = useState([]);
-
-  useEffect(() => {
-    axios.get('https://chefs-portfolio.herokuapp.com/api/users/post')
-      .then(response => {
-        setRecipeData(response.data.posts);
-      })
-  }, []);
-
+const RecipesList = (props) => {
+  const recipesData = props.recipesData;
   return (
     <>
-      {recipeData.map((recipe) => {
-        return <p>{recipe.title}</p>
+      {recipesData.map((recipeData) => {
+        return <RecipeCard 
+          key={recipeData.id}
+          recipeData={recipeData}
+        />
       })}
     </>
   )
