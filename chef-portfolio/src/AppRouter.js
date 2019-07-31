@@ -33,12 +33,12 @@ const AppRouter = () => {
         />
         <Route
           path='/:id'
-          render={(props) => {
-            return <RecipeDetailed 
+          render={(props) => (
+            <RecipeDetailed 
               {...props}
               recipesData={recipesData}
             />
-          }} />
+          )} />
       </Switch>
     </div>
   )
