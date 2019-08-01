@@ -17,7 +17,7 @@ const RecipeCard = (props) => {
             <span className='description'>{recipeData.description}</span>
           </Card.Meta>
           <Card.Description>
-            <span className='author'>By: {recipeData.chef_id}</span>
+            <span className='author'>By: {recipeData.chef}</span>
           </Card.Description>
         </Card.Content>
         <Card.Content extra>

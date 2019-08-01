@@ -22,18 +22,18 @@ const AppRouter = () => {
   }, []);
 
 
-  // const [chefsData, setChefsData] = useState([]);
+  const [chefsData, setChefsData] = useState([]);
 
-  // useEffect(() => {
-  //   axios
-  //     .get('https://chefs-portfolio.herokuapp.com/api/users/chef')
-  //     .then(response => {
-  //       setChefsData(response.data.chefs);
-  //     })
-  //     .catch(err => console.log('error in chef data fetch', err));
-  // }, [])
+  useEffect(() => {
+    axios
+      .get('https://chefs-portfolio.herokuapp.com/api/users/chef')
+      .then(response => {
+        setChefsData(response.data.chefs);
+      })
+      .catch(err => console.log('error in chef data fetch', err));
+  }, [])
 
-  // console.log('chefsData', chefsData);
+  console.log('chefsData', chefsData);
 
   return (
     <div className='app-router'>
@@ -45,6 +45,7 @@ const AppRouter = () => {
             <HomePageContainer 
               {...props}
               recipesData={recipesData}
+              chefsData={chefsData}
             />
           )} 
         />
