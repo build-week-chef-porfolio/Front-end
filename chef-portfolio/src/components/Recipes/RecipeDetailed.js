@@ -45,7 +45,7 @@ const RecipeDetailed = (props) => {
               size='medium'
               href='http://google.com'
               />
-              <Header size='small'>By: {recipeToDisplay.chef_id} </Header>
+              <Header size='small'>By: {recipeToDisplay.chef} </Header>
             </div>
           </Grid.Column>
         </Grid.Row>
