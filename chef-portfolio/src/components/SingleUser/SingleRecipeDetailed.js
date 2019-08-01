@@ -14,7 +14,7 @@ const getRecipeToDisplay = (recipesData, selectedRecipe) => {
   }
 }
 
-const RecipeDetailed = (props) => {
+const SingleRecipeDetailed = (props) => {
 
   const recipesData = props.recipesData;
 
@@ -87,4 +87,4 @@ const RecipeDetailed = (props) => {
   )
 }
 
-export default RecipeDetailed;
+export default SingleRecipeDetailed;

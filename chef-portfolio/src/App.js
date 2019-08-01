@@ -14,11 +14,7 @@ function App() {
   return (
     <div className="App">
 
-      {/* <Login /> */}
-
       <AppRouter />
-
-      <Footer />
 
     </div>
   );

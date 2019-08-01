@@ -2,9 +2,10 @@ import React from 'react'
 import { Card, Icon, Image } from 'semantic-ui-react';
 import { NavLink } from 'react-router-dom';
 
-const RecipeCard = (props) => {
+const SingleRecipesCard = (props) => {
   const recipeData = props.recipeData;
   return (
+      <div className='singlerecipescardWrapper'>
     <Card>
       {/* <NavLink to={`/recipe-title`}> */}
       <Image src={recipeData.imgURL} as='a'
@@ -33,7 +34,8 @@ const RecipeCard = (props) => {
         </Card.Content>
       {/* </NavLink> */}
     </Card>
+    </div>
   )
 }
 
-export default RecipeCard;
+export default SingleRecipesCard;
