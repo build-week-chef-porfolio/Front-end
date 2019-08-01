@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import RecipeCard from '../Recipes/RecipeCard';
 import DropdownFilterSearchInMenu from './RecipesFilter';
 const RecipesList = (props) => {

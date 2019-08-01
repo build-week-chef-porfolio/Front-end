@@ -6,6 +6,7 @@ import Login from './login';
 
 import Footer from './components/Footer/Footer';
 import AppRouter from './AppRouter';
+import ChefList from './components/Chef/ChefList';
 
 function App() {
 
@@ -17,6 +18,8 @@ function App() {
       {/* <Login /> */}
 
       <AppRouter />
+
+      {/* <ChefList /> */}
 
       <Footer />
 

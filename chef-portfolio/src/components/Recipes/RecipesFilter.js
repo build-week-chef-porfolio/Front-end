@@ -27,7 +27,7 @@ const DropdownFilterSearchInMenu = (props) => {
 
       <Dropdown
         text='Chef'
-        icon='filter'
+        icon='user'
         floating
         labeled
         button
@@ -44,7 +44,7 @@ const DropdownFilterSearchInMenu = (props) => {
 
       <Dropdown
         text='Meal Type'
-        icon='filter'
+        icon='food'
         floating
         labeled
         button
@@ -61,7 +61,7 @@ const DropdownFilterSearchInMenu = (props) => {
 
       <Dropdown
         text='Ingredient'
-        icon='filter'
+        icon='lemon'
         floating
         labeled
         button
