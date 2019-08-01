@@ -55,8 +55,17 @@ const AppRouter = () => {
               recipesData={recipesData}
             />
           )} />
+           <Route
+          path='/chefs/'
+          render={(props) => (
+            <ChefList 
+              {...props}
+              chefsData={chefsData}
+            />
+          )}
+        />
         <Route
-          path='/recipes/'
+          path='/recipes/id'
           render={(props) => (
             <RecipeDetailed 
               {...props}

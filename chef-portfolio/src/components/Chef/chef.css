@@ -1,0 +1,7 @@
+.singleChefCardWrapper {
+    width: 100%;
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap:wrap;
+    background-color: #0D132B;
+}
