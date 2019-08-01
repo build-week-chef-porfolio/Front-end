@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dropdown } from 'semantic-ui-react';
+import { Dropdown, Menu } from 'semantic-ui-react';
 
 const DropdownFilterSearchInMenu = (props) => {
 
@@ -7,9 +7,10 @@ const DropdownFilterSearchInMenu = (props) => {
 
   return (
     <>
+    <Menu>
       <Dropdown
         text='Title'
-        icon='filter'
+        multiple icon='filter'
         floating
         labeled
         button
@@ -74,6 +75,16 @@ const DropdownFilterSearchInMenu = (props) => {
           </Dropdown.Menu>
         </Dropdown.Menu>
       </Dropdown>
+        <Menu.Menu position='right'>
+          <div className='ui right aligned category search item'>
+            <div className='ui transparent icon input'>
+              <input className='prompt' type='text' placeholder='Search recipes...' />
+              <i className='search link icon' />
+            </div>
+            <div className='results' />
+          </div>
+        </Menu.Menu>
+    </Menu>
     </>
   )
 

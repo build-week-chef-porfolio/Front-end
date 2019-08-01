@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import HomePageContainer from './components/MainContainer/HomePageContainer';
 import RecipeDetailed from './components/Recipes/RecipeDetailed.js';
 import MainMenu from './components/Menu/Menu.js';
-import axios from 'axios'
+import axios from 'axios';
 import ChefList from './components/Chef/ChefList';
 
 
@@ -49,6 +49,14 @@ const AppRouter = () => {
             />
           )} 
         />
+        <Route
+          path='/recipes'
+          render={(props) => (
+            <RecipesList
+              {...props}
+              recipesData={recipesData}
+            />
+          )} />
         <Route
           path='/:id'
           render={(props) => (
