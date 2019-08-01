@@ -54,3 +54,40 @@
     font-size: 5rem;
 
 }
+
+.singletallImages {
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 3px solid #FBC02D;
+}
+
+.singletallImages img {
+    width: 350px;
+    height: auto;
+
+}
+.singlechefImages {
+    padding: 20px;
+    width: 100%;
+
+}
+.singlechefImages h2 {
+    width:100%;
+    color: white;
+}
+
+.singlechefImagesWrapper {
+    width: 100%;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+.singlechefImages img {
+    width: 300px;
+    height: auto;
+
+}
