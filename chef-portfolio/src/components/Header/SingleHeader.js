@@ -8,7 +8,7 @@ const SingleHeader = () => {
         <div className="singleheaderWrapper">
             <SingleMainMenu />
             <div className='singleheaderH1'>
-                <h1>Get Rop Rated Chefs For Your Next Social Gathering</h1>
+                <h1>Get Top Rated Chefs For Your Next Social Gathering</h1>
             </div>
             <div className="singletallImages">
                 <Image

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import RecipeCard from './RecipeCard';
+import { Grid } from 'semantic-ui-react';
 
 const DropdownFilterSearchInMenu = (props) => {
   const recipesData = props.recipesData;
@@ -26,17 +27,19 @@ const DropdownFilterSearchInMenu = (props) => {
   }
 
   return (
+    
     <section className="search-form">
       <form onSubmit={(event) => preOnSearch(event)}>
         <fieldset>
           {/* <legend>Add Recipe</legend> */}
+          <Grid>
+          <Grid.Column width={6}>
           <div className='name'>
             <label>
-              Title:
+              Recipe Title:
             <input
                 type='text'
                 name='title'
-                placeholder='Recipe Name'
                 value={query.title}
                 onChange={handleInputChange}
               />
@@ -49,6 +52,7 @@ const DropdownFilterSearchInMenu = (props) => {
                 {/* {recipesData.forEach(recipe => {
                   return <option value={recipe.meal_type}>{recipe.meal_type}</option>
                 })} */}
+                <option value=''></option>
                 <option value='Breakfast'>Breakfast</option>
                 <option value='Lunch'>Lunch</option>
                 <option value='Dinner'>Dinner</option>
@@ -57,39 +61,45 @@ const DropdownFilterSearchInMenu = (props) => {
               </select>
             </label>
           </div>
+          
+          </Grid.Column>
+          <Grid.Column width={6}>
           <div className='chef'>
             <label>
-              Chef:
+              Chef Name:
             <input
                 type='text'
                 name='chef'
-                placeholder='Chef Name'
                 value={query.chef}
                 onChange={handleInputChange}
               />
             </label>
           </div>
+          
           <div className='ingredients'>
             <label>
-              Ingredient:
+              Main Ingredient:
             <input
                 type='text'
                 name='ingredient'
-                placeholder='Main Ingredient'
                 // id='role' 
                 value={query.ingredient}
                 onChange={handleInputChange}
               />
             </label>
           </div>
+          </Grid.Column>
+          <Grid.Column width={3}>
           <button>
             Find Recipe
             {/* {isEditing ? 'Edit Member!' : 'Add Member!'} */}
           </button>
+          </Grid.Column>
+          </Grid>
         </fieldset>
       </form>
     </section>
-
+ 
     
   )
 }

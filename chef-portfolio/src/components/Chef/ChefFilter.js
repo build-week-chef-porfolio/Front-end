@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ChefCard from './ChefCard';
-
+import { Grid } from 'semantic-ui-react';
 const ChefDropdownFilterSearchInMenu = (props) => {
   const chefsData = props.chefsData;
   const onSearch = props.onSearch;
@@ -29,11 +29,13 @@ const ChefDropdownFilterSearchInMenu = (props) => {
     <section className="search-form">
       <form onSubmit={(event) => preOnSearch(event)}>
         <fieldset>
+        <Grid>
+          <Grid.Column width={6}>
           {/* <legend>Add Recipe</legend> */}
               <div className='meal-type'>
             <label>
               Chef Type:
-              <select onChange={handleInputChange} id='zipcode' name='zipcode'>
+              <select onChange={handleInputChange} id='chef_type' name='chef_type'>
                 {/* {recipesData.forEach(recipe => {
                   return <option value={recipe.meal_type}>{recipe.meal_type}</option>
                 })} */}
@@ -44,6 +46,8 @@ const ChefDropdownFilterSearchInMenu = (props) => {
             </label>
             <p>What type of Chef are you looking for?</p>
           </div>
+          </Grid.Column>
+          <Grid.Column width={6}>
           <div className='zipcode'>
             <label>
               Zipcode
@@ -52,13 +56,12 @@ const ChefDropdownFilterSearchInMenu = (props) => {
                 name='Zipcode'
                 placeholder=''
                 // id='role' 
-                value={query.ingredient}
+                value={query.zip_code}
                 onChange={handleInputChange}
               />
             </label>
-          </div>
-          <p>or</p>
-          <div className='zipcode'>
+            <p>or</p>
+            <div className='zipcode'>
             <label>
               City
             <input
@@ -66,17 +69,23 @@ const ChefDropdownFilterSearchInMenu = (props) => {
                 name='City'
                 placeholder=''
                 // id='role' 
-                value={query.ingredient}
+                value={query.cirt}
                 onChange={handleInputChange}
               />
             </label>
           </div>
+          </div>      
           <p>Where is the event or gathering?</p>
+          </Grid.Column>
+          <Grid.Column width={3}>
           <button>
             Search
             {/* {isEditing ? 'Edit Member!' : 'Add Member!'} */}
           </button>
+          </Grid.Column>
+          </Grid>
         </fieldset>
+        
       </form>
     </section>
 
