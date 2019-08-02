@@ -1,0 +1,49 @@
+.chef-add-recipe {
+  max-width: 1200px;
+  border: 1px solid red;
+  display: flex;
+  background-color: #DFE7ED;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.chef-add-recipe label {
+  color: black;
+  font-weight: bold;
+  /* font-size: 1.2rem; */
+}
+
+.chef-add-recipe input {
+  /* color: green; */
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.chef-add-recipe button {
+  padding: 20px;
+  margin: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+.add-recipe {
+  background-color: #4CAF50;
+  box-shadow: 0px 5px 14px rgba(153, 153, 153, 0.42), 0px 3px 10px rgba(0, 0, 0, 0.12);
+  border-radius: 30px;
+}
+
+.preview-recipe {
+  background-color: black;
+  box-shadow: 0px 2px 2px rgba(153, 153, 153, 0.2);
+  border-radius: 30px;
+}
+
+.chef-add-recipe .publish-recipe {
+  color: black;
+  background-color: #EBB358;
+  box-shadow: 0px 5px 14px rgba(235, 179, 88, 0.6), 0px 3px 10px rgba(0, 0, 0, 0.12);
+  border-radius: 3px;
+}
+
+.chef-add-recipe div {
+  margin: 20px;
+}

@@ -5,6 +5,7 @@ import RecipeDetailed from './components/Recipes/RecipeDetailed.js';
 import MainMenu from './components/Menu/Menu.js';
 import axios from 'axios';
 import ChefList from './components/Chef/ChefList';
+import RecipesList from './components/Recipes/RecipesList';
 
 
 
@@ -35,6 +36,28 @@ const AppRouter = () => {
 
   console.log('chefsData', chefsData);
 
+  const [searchQuery, setSearchQuery] = useState();
+  const [queryData, setQueryData] = useState();
+
+  const handleClick = (event, recipe) => {
+    event.preventDefault();
+    console.log('recipe in AppRouter --> handleClick', recipe)
+    setSearchQuery(recipe.id);
+  }
+
+  useEffect(() => {
+    axios
+      .get(
+        `https://chefs-portfolio.herokuapp.com/api/users/post/${searchQuery}`
+      )
+      .then(result => {
+        setQueryData(result.data.post);
+      })
+      .catch(error => {
+        console.log('error in app.js', error);
+      });
+  }, [searchQuery])
+
   return (
     <div className='app-router'>
       <MainMenu />
@@ -55,8 +78,10 @@ const AppRouter = () => {
             <RecipesList
               {...props}
               recipesData={recipesData}
+              handleClick={handleClick}
             />
-          )} />
+          )} 
+        />
         <Route
           path='/:id'
           render={(props) => (

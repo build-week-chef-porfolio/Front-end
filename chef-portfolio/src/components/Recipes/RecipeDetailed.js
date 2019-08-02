@@ -1,5 +1,6 @@
 import React from 'react';
 import { Grid, Header, Image } from 'semantic-ui-react';
+
 const getRecipeToDisplay = (recipesData, selectedRecipe) => {
   if (recipesData.length === 0) {
     return [];
@@ -45,7 +46,7 @@ const RecipeDetailed = (props) => {
               size='medium'
               href='http://google.com'
               />
-              <Header size='small'>By: {recipeToDisplay.chef_id} </Header>
+              <Header size='small'>By: {recipeToDisplay.chef} </Header>
             </div>
           </Grid.Column>
         </Grid.Row>
