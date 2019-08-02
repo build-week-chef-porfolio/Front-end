@@ -13,12 +13,8 @@ const ChefDropdownFilterSearchInMenu = (props) => {
   });
 
   const handleInputChange = (event) => {
-    // console.log('event.target.name', event.target.name)
-    // console.log('event.target.value', event.target.value)
     setQuery({ ...query, [event.target.name]: event.target.value })
   }
-
-  // console.log(query)
 
   const preOnSearch = (event) => {
     event.preventDefault();
@@ -80,7 +76,6 @@ const ChefDropdownFilterSearchInMenu = (props) => {
           <Grid.Column width={3}>
           <button>
             Search
-            {/* {isEditing ? 'Edit Member!' : 'Add Member!'} */}
           </button>
           </Grid.Column>
           </Grid>

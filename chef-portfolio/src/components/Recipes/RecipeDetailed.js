@@ -8,10 +8,6 @@ const getRecipeToDisplay = (recipesData, selectedRecipe) => {
   } else if (!selectedRecipe) {
     return recipesData;
   } else {
-    // recipesData.forEach(recipeData => {
-    //   console.log(recipeData)
-
-    // })
     return recipesData.find(recipeData => recipeData.id == selectedRecipe);
   }
 }
@@ -20,14 +16,9 @@ const RecipeDetailed = (props) => {
 
   const recipesData = props.recipesData;
 
-  console.log('recipesData in RecipeDetailed', recipesData)
-  console.log('recipesData', recipesData)
-
   const selectedRecipe = props.match.params.id;
-  console.log('selectedRecipe', selectedRecipe)
-  let recipeToDisplay = getRecipeToDisplay(recipesData, selectedRecipe);
-  console.log('recipeToDisplay Object', recipeToDisplay)
 
+  let recipeToDisplay = getRecipeToDisplay(recipesData, selectedRecipe);
 
   return (
     <div className='recipeDetailedWrapper'>
