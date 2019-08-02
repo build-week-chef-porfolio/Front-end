@@ -5,6 +5,7 @@ import RecipeDetailed from './components/Recipes/RecipeDetailed.js';
 import axios from 'axios';
 import ChefList from './components/Chef/ChefList.js';
 import RecipesList from './components/Recipes/RecipesList.js';
+import RecipeCard from './components/Recipes/RecipeCard.js';
 
 const AppRouter = () => {
 
@@ -33,14 +34,19 @@ const AppRouter = () => {
 
   console.log('chefsData', chefsData);
 
+
   const [searchQuery, setSearchQuery] = useState('');
   const [queryData, setQueryData] = useState();
 
-  const handleClick = (event, recipe) => {
-    event.preventDefault();
-    console.log('recipe in AppRouter --> handleClick', recipe)
-    setSearchQuery(recipe.id);
+  const onSearch = (query) => {
+    // event.preventDefault();
+    console.log('query in AppRouter --> handleClick', query)
+    if (query.title === 'Caramel Cake') {
+      setSearchQuery(1);
+    }
   }
+
+  console.log('search QUery', searchQuery);
 
   useEffect(() => {
     axios
@@ -74,7 +80,8 @@ const AppRouter = () => {
             <RecipesList
               {...props}
               recipesData={recipesData}
-              handleClick={handleClick}
+              onSearch={onSearch}
+              queryData={queryData}
             />
           )} 
         />
