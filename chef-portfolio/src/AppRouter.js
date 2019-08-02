@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Switch, Route } from 'react-router-dom';
-import HomePageContainer from './components/MainContainer/HomePageContainer';
+import HomePageContainer from './components/MainContainer/HomePageContainer.js';
 import RecipeDetailed from './components/Recipes/RecipeDetailed.js';
 import axios from 'axios';
-import ChefList from './components/Chef/ChefList';
-import RecipesList from './components/Recipes/RecipesList';
-
+import ChefList from './components/Chef/ChefList.js';
+import RecipesList from './components/Recipes/RecipesList.js';
 
 const AppRouter = () => {
 
@@ -34,6 +33,28 @@ const AppRouter = () => {
 
   console.log('chefsData', chefsData);
 
+  const [searchQuery, setSearchQuery] = useState();
+  const [queryData, setQueryData] = useState();
+
+  const handleClick = (event, recipe) => {
+    event.preventDefault();
+    console.log('recipe in AppRouter --> handleClick', recipe)
+    setSearchQuery(recipe.id);
+  }
+
+  useEffect(() => {
+    axios
+      .get(
+        `https://chefs-portfolio.herokuapp.com/api/users/post/${searchQuery}`
+      )
+      .then(result => {
+        setQueryData(result.data.post);
+      })
+      .catch(error => {
+        console.log('error in app.js', error);
+      });
+  }, [searchQuery])
+
   return (
     <div className='app-router'>
       <Switch>
@@ -53,9 +74,11 @@ const AppRouter = () => {
             <RecipesList
               {...props}
               recipesData={recipesData}
+              handleClick={handleClick}
             />
-          )} />
-           <Route
+          )} 
+        />
+       <Route
           path='/chefs/'
           render={(props) => (
             <ChefList 
