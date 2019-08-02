@@ -13,8 +13,8 @@ const HomePageContainer = (props) => {
         <div className="HomePageWrapper">
             {/* <Header /> */}
             {/* <ChefAddRecipe /> */}
-            {/* <RecipesList recipesData={recipesData} />
-            <ChefList chefsData={chefsData} /> */}
+            {/* <RecipesList recipesData={recipesData} /> */}
+            {/* <ChefList chefsData={chefsData} /> */}
             <SingleHeader />
             {/* <RecipesList recipesData={recipesData} />
             <ChefList chefsData={chefsData} /> */}
