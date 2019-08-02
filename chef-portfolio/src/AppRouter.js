@@ -69,7 +69,7 @@ const AppRouter = () => {
           )} 
         />
         <Route
-          path='/recipes'
+          exact path='/recipes'
           render={(props) => (
             <RecipesList
               {...props}
@@ -88,7 +88,7 @@ const AppRouter = () => {
           )}
         />
         <Route
-          path='/recipes/id'
+          path='/recipes/:id'
           render={(props) => (
             <RecipeDetailed 
               {...props}

@@ -8,7 +8,7 @@ const RecipeCard = (props) => {
     <Card>
       {/* <NavLink to={`/recipe-title`}> */}
       <Image src={recipeData.imgURL} as='a'
-        href={`/${recipeData.id}`}
+        href={`/recipes/${recipeData.id}`}
         alt={recipeData.title} wrapped ui={false} />
         <Card.Content>
           <Card.Header>{recipeData.title}</Card.Header>
