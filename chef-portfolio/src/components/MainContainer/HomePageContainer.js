@@ -11,10 +11,10 @@ const HomePageContainer = (props) => {
     const chefsData = props.chefsData;
     return (
         <div className="HomePageWrapper">
-            <Header />
+            {/* <Header /> */}
             {/* <ChefAddRecipe /> */}
-            <RecipesList recipesData={recipesData} />
-            <ChefList chefsData={chefsData} />
+            {/* <RecipesList recipesData={recipesData} /> */}
+            {/* <ChefList chefsData={chefsData} /> */}
             <SingleHeader />
             {/* <RecipesList recipesData={recipesData} />
             <ChefList chefsData={chefsData} /> */}
