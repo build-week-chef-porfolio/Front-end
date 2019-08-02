@@ -47,3 +47,11 @@
 .chef-add-recipe div {
   margin: 20px;
 }
+
+.singleChefCardWrapper {
+    width: 100%;
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap:wrap;
+    background-color: #0D132B;
+}

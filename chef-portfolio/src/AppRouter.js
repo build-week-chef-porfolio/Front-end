@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Switch, Route } from 'react-router-dom';
-import HomePageContainer from './components/MainContainer/HomePageContainer';
+import HomePageContainer from './components/MainContainer/HomePageContainer.js';
 import RecipeDetailed from './components/Recipes/RecipeDetailed.js';
-import MainMenu from './components/Menu/Menu.js';
 import axios from 'axios';
-import ChefList from './components/Chef/ChefList';
-import RecipesList from './components/Recipes/RecipesList';
-
-
+import ChefList from './components/Chef/ChefList.js';
+import RecipesList from './components/Recipes/RecipesList.js';
 
 const AppRouter = () => {
 
@@ -60,7 +57,6 @@ const AppRouter = () => {
 
   return (
     <div className='app-router'>
-      <MainMenu />
       <Switch>
         <Route 
           exact path='/' 
@@ -82,8 +78,17 @@ const AppRouter = () => {
             />
           )} 
         />
+       <Route
+          path='/chefs/'
+          render={(props) => (
+            <ChefList 
+              {...props}
+              chefsData={chefsData}
+            />
+          )}
+        />
         <Route
-          path='/:id'
+          path='/recipes/id'
           render={(props) => (
             <RecipeDetailed 
               {...props}

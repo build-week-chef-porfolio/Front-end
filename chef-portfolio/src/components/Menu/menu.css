@@ -8,3 +8,26 @@
 .menuWrapper li {
   padding: 15px;
 }
+/* SINGLE MENU */
+
+.singlemenuWrapper {
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+  border-bottom: 2px solid white;
+  background-color: #0D132B;
+}
+
+.singlemenuWrapper li {
+  padding: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+.singlemenuWrapper a {
+  color: white;
+}
+.singlemenuWrapper li a:hover {
+  border-bottom: 1px solid #FBC02D;
+  text-shadow: 1px 0px 20px yellow;
+  color: white;
+}
