@@ -4,23 +4,40 @@ import DropdownFilterSearchInMenu from './RecipeFilterRedone';
 import ChefAddRecipe from '../Chef/ChefAddRecipe';
 
 const RecipesList = (props) => {
-  // const {recipesData, handleClick} = props;
+  // const {recipesData, onSearch} = props;
   const recipesData = props.recipesData;
-  const handleClick = props.handleClick;
+  const onSearch = props.onSearch;
+  const queryData = props.queryData;
 
-  console.log('recipesData in RecipesList', recipesData)
-  console.log('handleClick in RecipesList', handleClick)
+  console.log('queryData in RecipesList', queryData);
+
+  // console.log('recipesData in RecipesList', recipesData)
+  // console.log('onSearch in RecipesList', onSearch)
   return (
     <>
     <div className='recipes-filter'>
-      <DropdownFilterSearchInMenu handleClick={handleClick} recipesData={recipesData} />
+      <DropdownFilterSearchInMenu onSearch={onSearch} recipesData={recipesData} />
     </div>
 
-    <div className='chef-add-recipe'>
-      <ChefAddRecipe handleClick={handleClick} recipesData={recipesData}s />
+    {/* <div className='chef-add-recipe'>
+      <ChefAddRecipe recipesData={recipesData}s />
+    </div> */}
+
+    <div className='recipes-list'>
+    {(queryData) ? (
+        <RecipeCard recipeData={queryData} />
+      ) : (
+        recipesData.map((recipeData) => {
+          return <RecipeCard
+            key={recipeData.id}
+            recipeData={recipeData}
+          />
+        })
+      )
+    }
     </div>
     
-    <div className='recipes-list'>
+    {/* <div className='recipes-list'>
       
       {recipesData.map((recipeData) => {
         return <RecipeCard 
@@ -28,7 +45,7 @@ const RecipesList = (props) => {
           recipeData={recipeData}
         />
       })}
-    </div>
+    </div> */}
     </>
   )
 }
