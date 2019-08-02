@@ -1,5 +1,6 @@
 import React from 'react';
 import { Grid, Header, Image } from 'semantic-ui-react';
+import SingleMainMenu from '../Menu/SingleMenu';
 
 const getRecipeToDisplay = (recipesData, selectedRecipe) => {
   if (recipesData.length === 0) {
@@ -30,6 +31,7 @@ const RecipeDetailed = (props) => {
 
   return (
     <div className='recipeDetailedWrapper'>
+      <SingleMainMenu />
       <Grid>
         <Grid.Row>
           <Grid.Column width={8}>

@@ -4,7 +4,7 @@ import HomePageContainer from './components/MainContainer/HomePageContainer.js';
 import RecipeDetailed from './components/Recipes/RecipeDetailed.js';
 import axios from 'axios';
 import ChefList from './components/Chef/ChefList.js';
-import RecipesList from './components/Recipes/RecipesList.js';
+import SingleRecipeList from './components/Recipes/SingleRecipeList';
 import RecipeCard from './components/Recipes/RecipeCard.js';
 
 const AppRouter = () => {
@@ -77,7 +77,7 @@ const AppRouter = () => {
         <Route
           exact path='/recipes'
           render={(props) => (
-            <RecipesList
+            <SingleRecipeList
               {...props}
               recipesData={recipesData}
               onSearch={onSearch}
