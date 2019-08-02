@@ -33,7 +33,7 @@ const AppRouter = () => {
 
   console.log('chefsData', chefsData);
 
-  const [searchQuery, setSearchQuery] = useState();
+  const [searchQuery, setSearchQuery] = useState('');
   const [queryData, setQueryData] = useState();
 
   const handleClick = (event, recipe) => {

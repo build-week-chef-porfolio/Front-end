@@ -1,14 +1,15 @@
 import React from 'react'
 import { Card, Icon, Image } from 'semantic-ui-react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const RecipeCard = (props) => {
   const recipeData = props.recipeData;
   return (
     <Card>
-      {/* <NavLink to={`/recipe-title`}> */}
-      <Image src={recipeData.imgURL} as='a'
-        href={`/recipes/${recipeData.id}`}
+      {/* <NavLink to={`/recipes/${recipeData.id}`}> */}
+      <Image src={recipeData.imgURL} as={Link}
+        to={`/recipes/${recipeData.id}`}
+        // href={`/recipes/${recipeData.id}`}
         alt={recipeData.title} wrapped ui={false} />
         <Card.Content>
           <Card.Header>{recipeData.title}</Card.Header>
