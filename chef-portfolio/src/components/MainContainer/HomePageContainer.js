@@ -7,8 +7,8 @@ import ChefAddRecipe from '../Chef/ChefAddRecipe';
 import SingleHeader from '../Header/SingleHeader';
 
 const HomePageContainer = (props) => {
-    const recipesData = props.recipesData;
-    const chefsData = props.chefsData;
+    // const recipesData = props.recipesData;
+    // const chefsData = props.chefsData;
     return (
         <div className="HomePageWrapper">
             {/* <Header /> */}

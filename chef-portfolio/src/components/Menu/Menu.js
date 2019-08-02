@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 const MainMenu = () => {
@@ -7,10 +7,10 @@ const MainMenu = () => {
     return (
       <ul className='menuWrapper'>
         <li>
-        <Link to="/">Home</Link>
+        <Link exact to="/">Home</Link>
         </li>
         <li>
-          <Link to="/recipes">Recipes</Link>
+          <Link exact to="/recipes">Recipes</Link>
         </li>
         <li>
           Images

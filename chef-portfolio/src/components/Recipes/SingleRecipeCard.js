@@ -6,10 +6,8 @@ const SingleRecipeCard = (props) => {
   const recipeData = props.recipeData;
   return (
     <Card>
-      {/* <NavLink to={`/recipes/${recipeData.id}`}> */}
       <Image src={recipeData.imgURL} as={Link}
         to={`/recipes/${recipeData.id}`}
-        // href={`/recipes/${recipeData.id}`}
         alt={recipeData.title} wrapped ui={false} />
         <Card.Content>
           <Card.Header>{recipeData.title}</Card.Header>
@@ -25,14 +23,13 @@ const SingleRecipeCard = (props) => {
             <a>
               <Icon name='heart outline' />
               22
-      </a>
+            </a>
             <a>
               <Icon name='comment outline' />
               15
-      </a>
+            </a>
           </div>
         </Card.Content>
-      {/* </NavLink> */}
     </Card>
   )
 }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 const SingleMainMenu = () => {
@@ -7,13 +7,13 @@ const SingleMainMenu = () => {
     return (
       <ul className='singlemenuWrapper'>
         <li>
-        <Link to="/">Home</Link>
+        <Link exact to="/">Home</Link>
         </li>
         <li>
-        <Link to="/chefs">Find Chefs</Link>
+        <Link exact to="/chefs">Find Chefs</Link>
         </li>
         <li>
-        <Link to="/recipes">Browse Recipes</Link>
+        <Link exact to="/recipes">Browse Recipes</Link>
         </li>
         <li>
           About Us
@@ -25,4 +25,4 @@ const SingleMainMenu = () => {
     )
 }
 
-export default SingleMainMenu
+export default SingleMainMenu;

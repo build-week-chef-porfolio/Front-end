@@ -5,10 +5,10 @@ import RecipeDetailed from './components/Recipes/RecipeDetailed.js';
 import axios from 'axios';
 import ChefList from './components/Chef/ChefList.js';
 import SingleRecipeList from './components/Recipes/SingleRecipeList';
-import RecipeCard from './components/Recipes/RecipeCard.js';
 
 const AppRouter = () => {
 
+  // hook for data of all recipes in the API
   const [recipesData, setRecipesData] = useState([]);
 
   useEffect(() => {
@@ -20,7 +20,7 @@ const AppRouter = () => {
       .catch(err => console.log('there is an error in Recipe data fetch', err))
   }, []);
 
-
+  // hook for data of all chefs in the API
   const [chefsData, setChefsData] = useState([]);
 
   useEffect(() => {
@@ -32,21 +32,16 @@ const AppRouter = () => {
       .catch(err => console.log('error in chef data fetch', err));
   }, [])
 
-  console.log('chefsData', chefsData);
-
-
+  // hook for search query
   const [searchQuery, setSearchQuery] = useState('');
+  // hook for data from search query
   const [queryData, setQueryData] = useState();
 
   const onSearch = (query) => {
-    // event.preventDefault();
-    console.log('query in AppRouter --> handleClick', query)
     if (query.title === 'Caramel Cake') {
       setSearchQuery(1);
     }
   }
-
-  console.log('search QUery', searchQuery);
 
   useEffect(() => {
     axios
@@ -103,15 +98,6 @@ const AppRouter = () => {
             />
           )}
         />
-        {/* <Route 
-          path='/:chefName'
-          render={(props) => (
-            <ChefList 
-              {...props}
-              chefsData={chefsData}
-            />
-          )}
-        /> */}
       </Switch>
     </div>
   )
